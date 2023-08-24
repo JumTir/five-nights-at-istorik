@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cviwom06g8y33"]
+
+[ext_resource type="PackedScene" uid="uid://cv0gkni472853" path="res://Epic Jarv-Hillar (1).glb" id="1_tt878"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.99555, 0, -0.0942299, 0, 1, 0, 0.0942299, 0, 0.99555, 2.64411, 0, 0.511713)
+
+[node name="Epic Jarv-Hillar (1)" parent="." instance=ExtResource("1_tt878")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.683556, 1.89039, 2.56628)

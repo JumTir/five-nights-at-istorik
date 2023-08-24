@@ -1,0 +1,149 @@
+[gd_scene load_steps=17 format=3 uid="uid://dnvgnmht2rdoe"]
+
+[ext_resource type="Script" path="res://Button.gd" id="1"]
+[ext_resource type="Script" path="res://аф.gd" id="1_1i7mi"]
+[ext_resource type="Texture2D" uid="uid://c7peij6imlp15" path="res://hhk.png" id="1_g3pj3"]
+[ext_resource type="VideoStream" path="res://кортина_2.ogv" id="2_l65uo"]
+[ext_resource type="Script" path="res://VideoStreamPlayerпп.gd" id="3_rv635"]
+[ext_resource type="Texture2D" uid="uid://h4gprohkl1gm" path="res://кортина.jpg" id="4"]
+[ext_resource type="Texture2D" uid="uid://dgf2hjxc2h8s1" path="res://ogurchick.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dxq2yt50mmxb4" path="res://gg.png" id="8_prkko"]
+[ext_resource type="Script" path="res://ро.gd" id="8_uo0o3"]
+[ext_resource type="FontFile" uid="uid://ll6th7st2qj4" path="res://EBENYA.ttf" id="9_joogc"]
+[ext_resource type="Script" path="res://ф.gd" id="11_juag4"]
+[ext_resource type="FontFile" uid="uid://dl5xohxgote2n" path="res://ofont.ru_Another_Danger.ttf" id="12_1sgkb"]
+
+[sub_resource type="QuadMesh" id="1"]
+
+[sub_resource type="QuadMesh" id="4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_io8ox"]
+font = ExtResource("9_joogc")
+font_size = 80
+font_color = Color(0.854902, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tquk0"]
+font = ExtResource("12_1sgkb")
+font_size = 60
+font_color = Color(1, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1i7mi")
+
+[node name="Hhk" type="Sprite2D" parent="."]
+position = Vector2(997, 543)
+scale = Vector2(2.58961, 2.10485)
+texture = ExtResource("1_g3pj3")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
+mesh = SubResource("1")
+
+[node name="Кортина" type="Sprite2D" parent="MeshInstance2D"]
+visible = false
+position = Vector2(922.25, 502.25)
+scale = Vector2(1.84798, 1.50455)
+texture = ExtResource("4")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visible = false
+offset_left = -188.0
+offset_right = 2345.0
+offset_bottom = 1019.0
+stream = ExtResource("2_l65uo")
+autoplay = true
+expand = true
+script = ExtResource("3_rv635")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(836, 408)
+scale = Vector2(1.68182, 1.23065)
+mesh = SubResource("4")
+
+[node name="Sprite2D" type="Sprite2D" parent="MeshInstance2D2"]
+visible = false
+position = Vector2(283.621, 204.77)
+scale = Vector2(0.388315, 0.445989)
+texture = ExtResource("6")
+
+[node name="Gg" type="Sprite2D" parent="."]
+position = Vector2(1612, 529)
+scale = Vector2(1.77326, 1.55242)
+texture = ExtResource("8_prkko")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 151.0
+offset_right = 1960.0
+offset_bottom = 337.0
+theme_override_colors/font_color = Color(0.584314, 0.584314, 0.584314, 1)
+theme_override_fonts/font = ExtResource("9_joogc")
+theme_override_font_sizes/font_size = 150
+text = "5 ночей с историком"
+clip_text = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 110.0
+offset_top = 359.0
+offset_right = 1722.0
+offset_bottom = 482.0
+theme_override_colors/font_hover_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_fonts/font = ExtResource("9_joogc")
+theme_override_font_sizes/font_size = 100
+text = "начать игру: ночь первая"
+flat = true
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 563.0
+offset_top = 502.0
+offset_right = 1304.0
+offset_bottom = 625.0
+theme_override_colors/font_hover_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_fonts/font = ExtResource("9_joogc")
+theme_override_font_sizes/font_size = 100
+text = "настройки"
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_uo0o3")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 689.0
+offset_top = 633.0
+offset_right = 1164.0
+offset_bottom = 824.0
+theme_override_fonts/font = ExtResource("9_joogc")
+theme_override_font_sizes/font_size = 110
+text = "выйти"
+script = ExtResource("11_juag4")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1340.0
+offset_top = 909.0
+offset_right = 1971.0
+offset_bottom = 1072.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Alpha 0.2"
+label_settings = SubResource("LabelSettings_io8ox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 59.0
+offset_top = 22.0
+offset_right = 1453.0
+offset_bottom = 148.0
+text = "Внимание: БЕРЕГИТЕ УШИ ПРИ ГРОМКИХ СКРИМЕРАХ!!!"
+label_settings = SubResource("LabelSettings_tquk0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

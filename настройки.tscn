@@ -1,0 +1,147 @@
+[gd_scene load_steps=14 format=3 uid="uid://bmckdaok8yh1p"]
+
+[ext_resource type="VideoStream" path="res://1234.ogv" id="1_ji72g"]
+[ext_resource type="Texture2D" uid="uid://r11u23hjslvx" path="res://комната историка.png" id="2_5s12l"]
+[ext_resource type="Script" path="res://VideoStreamPlayer.gd" id="2_ctnno"]
+[ext_resource type="Script" path="res://OptionButton.gd" id="3_knoax"]
+[ext_resource type="FontFile" uid="uid://ll6th7st2qj4" path="res://EBENYA.ttf" id="4_627mo"]
+[ext_resource type="FontFile" uid="uid://dlm6tnowcncbr" path="res://times-new-roman.ttf" id="6_8unxj"]
+[ext_resource type="Script" path="res://hj.gd" id="7_v42me"]
+[ext_resource type="Script" path="res://Button09.gd" id="8_tawyp"]
+[ext_resource type="Script" path="res://jfhjd.gd" id="9_85xrk"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_lthsn"]
+
+[sub_resource type="Gradient" id="Gradient_jvboj"]
+offsets = PackedFloat32Array(0, 0.995833, 1)
+colors = PackedColorArray(2.31028e-06, 0.621341, 0.741354, 1, 0.136174, 0.322021, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5i3bq"]
+gradient = SubResource("Gradient_jvboj")
+
+[sub_resource type="LabelSettings" id="LabelSettings_6qcpg"]
+font = ExtResource("4_627mo")
+font_size = 200
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1088.0
+offset_bottom = 436.0
+stream = ExtResource("1_ji72g")
+autoplay = true
+script = ExtResource("2_ctnno")
+
+[node name="Bab" type="Sprite2D" parent="VideoStreamPlayer"]
+position = Vector2(1280.5, 548.75)
+scale = Vector2(2.1375, 1.36642)
+texture = ExtResource("2_5s12l")
+
+[node name="Button" type="Button" parent="VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_left = 127.0
+offset_top = 497.0
+offset_right = 1146.0
+offset_bottom = 642.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_fonts/font = ExtResource("4_627mo")
+theme_override_font_sizes/font_size = 80
+disabled = true
+text = "Разрешение экрана"
+flat = true
+text_overrun_behavior = 4
+clip_text = true
+expand_icon = true
+script = ExtResource("3_knoax")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="VideoStreamPlayer/Button"]
+visible = false
+position = Vector2(554, 274.625)
+scale = Vector2(924, 332.75)
+mesh = SubResource("QuadMesh_lthsn")
+texture = SubResource("GradientTexture1D_5i3bq")
+
+[node name="Button2" type="Button" parent="VideoStreamPlayer/Button"]
+visible = false
+texture_filter = 6
+texture_repeat = 1
+layout_mode = 0
+offset_left = 321.0
+offset_top = 115.0
+offset_right = 1156.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8unxj")
+theme_override_font_sizes/font_size = 70
+disabled = true
+text = "2560x1440 (2K)"
+flat = true
+clip_text = true
+script = ExtResource("7_v42me")
+
+[node name="Button3" type="Button" parent="VideoStreamPlayer/Button"]
+visible = false
+texture_filter = 6
+texture_repeat = 1
+layout_mode = 0
+offset_left = 279.0
+offset_top = 223.0
+offset_right = 1114.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8unxj")
+theme_override_font_sizes/font_size = 70
+disabled = true
+text = "1920x1080 (full HD)"
+flat = true
+clip_text = true
+script = ExtResource("8_tawyp")
+
+[node name="Button4" type="Button" parent="VideoStreamPlayer/Button"]
+visible = false
+texture_filter = 6
+texture_repeat = 1
+layout_mode = 0
+offset_left = 279.0
+offset_top = 319.0
+offset_right = 1114.0
+offset_bottom = 431.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8unxj")
+theme_override_font_sizes/font_size = 70
+disabled = true
+text = "1280x720 (HD)"
+flat = true
+clip_text = true
+script = ExtResource("9_85xrk")
+
+[node name="Label" type="Label" parent="VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 71.0
+offset_right = 2216.0
+offset_bottom = 394.0
+text = "Настройки"
+label_settings = SubResource("LabelSettings_6qcpg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 452.0
+offset_top = 372.0
+offset_right = 1958.0
+offset_bottom = 593.0
+theme_override_fonts/font = ExtResource("4_627mo")
+theme_override_font_sizes/font_size = 80
+text = "Пока что здесь нечего нету"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="VideoStreamPlayer/Button" to="VideoStreamPlayer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VideoStreamPlayer/Button/Button2" to="VideoStreamPlayer/Button/Button2" method="_on_pressed"]
+[connection signal="pressed" from="VideoStreamPlayer/Button/Button3" to="VideoStreamPlayer/Button/Button3" method="_on_pressed"]
+[connection signal="pressed" from="VideoStreamPlayer/Button/Button4" to="VideoStreamPlayer/Button/Button4" method="_on_pressed"]

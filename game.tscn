@@ -1,0 +1,540 @@
+[gd_scene load_steps=47 format=3 uid="uid://c6xih2g2jyc0k"]
+
+[ext_resource type="Script" path="res://игра.gd" id="1_hwj3l"]
+[ext_resource type="Script" path="res://Button2.gd" id="3_fbch8"]
+[ext_resource type="Texture2D" uid="uid://15mowaiufy5e" path="res://фы.png" id="4_64tb6"]
+[ext_resource type="Texture2D" uid="uid://00v4qt1rfypo" path="res://кнопка.png" id="5_kj1n4"]
+[ext_resource type="Script" path="res://a989.gd" id="6_p8ln3"]
+[ext_resource type="Texture2D" uid="uid://cyctg5mpbx3qi" path="res://maxresdefault (2).png" id="6_pdwvu"]
+[ext_resource type="FontFile" uid="uid://ll6th7st2qj4" path="res://EBENYA.ttf" id="7_2d7pf"]
+[ext_resource type="Texture2D" uid="uid://dmk7pbf8c75xq" path="res://план2.png" id="9_4bfok"]
+[ext_resource type="Script" path="res://Buttonn1.gd" id="10_4hgh4"]
+[ext_resource type="VideoStream" path="res://1._1mp4.ogv" id="10_e22xg"]
+[ext_resource type="Script" path="res://add.gd" id="11_8pdcd"]
+[ext_resource type="Script" path="res://Button5.gd" id="11_bst0a"]
+[ext_resource type="VideoStream" path="res://123.ogv" id="12_pid0n"]
+[ext_resource type="Script" path="res://Button67.gd" id="12_tj453"]
+[ext_resource type="Script" path="res://проходкамера.gd" id="13_5stsc"]
+[ext_resource type="Script" path="res://ad.gd" id="13_qmosl"]
+[ext_resource type="VideoStream" path="res://1выход12.ogv" id="14_ard11"]
+[ext_resource type="Script" path="res://Button8.gd" id="14_u3701"]
+[ext_resource type="Script" path="res://Button9.gd" id="15_q46or"]
+[ext_resource type="Script" path="res://903.gd" id="16_5wyuy"]
+[ext_resource type="Script" path="res://Button3.gd" id="16_e2874"]
+[ext_resource type="Script" path="res://904.gd" id="17_8akpt"]
+[ext_resource type="VideoStream" path="res://выход11.ogv" id="19_df11v"]
+[ext_resource type="VideoStream" path="res://выход222.ogv" id="20_1rear"]
+[ext_resource type="Script" path="res://905.gd" id="20_83fd2"]
+[ext_resource type="Script" path="res://f.gd" id="20_ottc4"]
+[ext_resource type="VideoStream" path="res://коридор2_2.ogv" id="20_wvjk8"]
+[ext_resource type="Script" path="res://ё9.gd" id="21_1uexq"]
+[ext_resource type="VideoStream" path="res://выход12.ogv" id="21_cm7l5"]
+[ext_resource type="Script" path="res://901.gd" id="21_d5p14"]
+[ext_resource type="Script" path="res://Button6.gd" id="21_u2okl"]
+[ext_resource type="Script" path="res://902.gd" id="22_r83pn"]
+[ext_resource type="VideoStream" path="res://проход.ogv" id="24_phk4c"]
+[ext_resource type="VideoStream" path="res://проход1.ogv" id="25_6qbu7"]
+[ext_resource type="Script" path="res://89.gd" id="25_ri86m"]
+[ext_resource type="Script" path="res://90.gd" id="27_pfes7"]
+[ext_resource type="VideoStream" path="res://команата-историка.ogv" id="29_3xc3v"]
+[ext_resource type="Script" path="res://92.gd" id="30_qj88h"]
+[ext_resource type="VideoStream" path="res://комната-историка2.ogv" id="31_spvgv"]
+[ext_resource type="Script" path="res://93.gd" id="32_fo1ah"]
+[ext_resource type="Texture2D" uid="uid://bhuvk70oeug0v" path="res://bbjk.png" id="35_fxptt"]
+[ext_resource type="VideoStream" path="res://мастерская.ogv" id="36_bw5rn"]
+[ext_resource type="Script" path="res://091.gd" id="37_axvsk"]
+[ext_resource type="Texture2D" uid="uid://bmc0avh3qcib6" path="res://gа.png" id="41_h728s"]
+[ext_resource type="AudioStream" uid="uid://brv5ots4eyfl0" path="res://SUS.mp3" id="45_ngo1n"]
+[ext_resource type="Script" path="res://н.gd" id="46_is3jc"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_hwj3l")
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 30.0
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Bbjk" type="Sprite2D" parent="Node2D"]
+position = Vector2(946, 537)
+scale = Vector2(1.01771, 1.00185)
+texture = ExtResource("35_fxptt")
+
+[node name="Button" type="Button" parent="Node2D"]
+offset_left = 497.0
+offset_top = 806.0
+offset_right = 609.0
+offset_bottom = 920.0
+icon = ExtResource("5_kj1n4")
+flat = true
+expand_icon = true
+script = ExtResource("6_p8ln3")
+
+[node name="Gа" type="Sprite2D" parent="Node2D/Button"]
+position = Vector2(453, -269)
+texture = ExtResource("41_h728s")
+
+[node name="Фы" type="Sprite2D" parent="Node2D/Button"]
+visible = false
+position = Vector2(470.5, -268.5)
+scale = Vector2(1.33688, 1.065)
+texture = ExtResource("4_64tb6")
+
+[node name="Button2" type="Button" parent="Node2D"]
+offset_left = 620.0
+offset_top = 974.0
+offset_right = 1463.0
+offset_bottom = 1061.0
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 50
+flat = true
+clip_text = true
+script = ExtResource("3_fbch8")
+
+[node name="План2" type="Sprite2D" parent="Node2D/Button2"]
+visible = false
+position = Vector2(-35, -532)
+scale = Vector2(0.461458, 0.418518)
+texture = ExtResource("9_4bfok")
+
+[node name="Buttonn1" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -199.974
+offset_top = 70.2066
+offset_right = -101.974
+offset_bottom = 184.207
+script = ExtResource("10_4hgh4")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Buttonn1"]
+visible = false
+layout_mode = 0
+offset_left = -757.0
+offset_top = -607.0
+offset_right = 1164.0
+offset_bottom = 470.0
+stream = ExtResource("10_e22xg")
+expand = true
+script = ExtResource("11_8pdcd")
+
+[node name="VideoStreamPlayer2" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Buttonn1/VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 1915.0
+offset_bottom = 1076.0
+audio_track = 1
+stream = ExtResource("12_pid0n")
+volume_db = -80.0
+autoplay = true
+expand = true
+script = ExtResource("13_qmosl")
+
+[node name="Button" type="Button" parent="Node2D/Button2/План2/Buttonn1/VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 391.933
+offset_top = 699.737
+offset_right = 722.933
+offset_bottom = 832.737
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 60
+text = "камеры"
+flat = true
+clip_text = true
+
+[node name="Button5" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -181.0
+offset_top = -389.0
+offset_right = -90.0
+offset_bottom = -316.0
+script = ExtResource("11_bst0a")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button5"]
+visible = false
+layout_mode = 0
+offset_left = -773.0
+offset_top = -151.0
+offset_right = 1139.0
+offset_bottom = 927.0
+stream = ExtResource("14_ard11")
+expand = true
+script = ExtResource("16_5wyuy")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button5/VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_right = 1917.0
+offset_bottom = 1078.0
+audio_track = 1
+stream = ExtResource("20_1rear")
+volume_db = -80.0
+autoplay = true
+expand = true
+script = ExtResource("17_8akpt")
+
+[node name="Button12345" type="Button" parent="Node2D/Button2/План2/Button5/VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 310.533
+offset_top = 742.687
+offset_right = 711.533
+offset_bottom = 853.687
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 80
+text = "камеры"
+flat = true
+
+[node name="Button6" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 494.0
+offset_top = -520.0
+offset_right = 592.0
+offset_bottom = -422.0
+script = ExtResource("12_tj453")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button6"]
+visible = false
+layout_mode = 0
+offset_left = -1449.0
+offset_top = -17.0
+offset_right = 469.0
+offset_bottom = 1053.0
+stream = ExtResource("19_df11v")
+expand = true
+script = ExtResource("20_83fd2")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button6/VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1077.0
+audio_track = 1
+stream = ExtResource("21_cm7l5")
+volume_db = -80.0
+expand = true
+script = ExtResource("21_1uexq")
+
+[node name="Button11e1" type="Button" parent="Node2D/Button2/План2/Button6/VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 402.242
+offset_top = 742.667
+offset_right = 762.242
+offset_bottom = 870.667
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 70
+text = "камеры"
+flat = true
+
+[node name="Button7" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 549.0
+offset_top = -106.0
+offset_right = 619.0
+offset_bottom = -40.0
+script = ExtResource("13_5stsc")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button7"]
+visible = false
+layout_mode = 0
+offset_left = -1502.0
+offset_top = -444.0
+offset_right = 428.0
+offset_bottom = 648.0
+stream = ExtResource("24_phk4c")
+expand = true
+script = ExtResource("25_ri86m")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button7/VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_left = -0.499573
+offset_top = 2.83115
+offset_right = 1936.5
+offset_bottom = 1086.83
+audio_track = 1
+stream = ExtResource("25_6qbu7")
+volume_db = -80.0
+autoplay = true
+expand = true
+script = ExtResource("27_pfes7")
+
+[node name="Button10e99" type="Button" parent="Node2D/Button2/План2/Button7/VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 153.361
+offset_top = 760.266
+offset_right = 759.361
+offset_bottom = 973.266
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 100
+text = "камеры"
+flat = true
+
+[node name="Button8" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 741.0
+offset_top = -53.0
+offset_right = 802.0
+offset_bottom = 13.0
+script = ExtResource("14_u3701")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button8"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 4.12
+anchor_bottom = 1.946
+offset_left = -1721.0
+offset_top = -482.0
+offset_right = -22.32
+offset_bottom = 457.564
+stream = ExtResource("29_3xc3v")
+expand = true
+script = ExtResource("30_qj88h")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button8/VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_right = 1949.0
+offset_bottom = 1068.0
+audio_track = 1
+stream = ExtResource("31_spvgv")
+volume_db = -80.0
+autoplay = true
+expand = true
+script = ExtResource("32_fo1ah")
+
+[node name="Button01" type="Button" parent="Node2D/Button2/План2/Button8/VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 329.887
+offset_top = 793.054
+offset_right = 756.887
+offset_bottom = 991.054
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 90
+text = "камеры"
+flat = true
+clip_text = true
+
+[node name="Button9" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 596.184
+offset_top = 333.973
+offset_right = 676.184
+offset_bottom = 421.973
+script = ExtResource("15_q46or")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button9"]
+layout_mode = 0
+offset_left = -1552.0
+offset_top = -855.0
+offset_right = 381.0
+offset_bottom = 201.0
+stream = ExtResource("36_bw5rn")
+expand = true
+script = ExtResource("37_axvsk")
+
+[node name="Button124567809" type="Button" parent="Node2D/Button2/План2/Button9/VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 767.0
+offset_right = 638.0
+offset_bottom = 903.0
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 90
+text = "камеры"
+flat = true
+
+[node name="Button10" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -130.201
+offset_top = 264.423
+offset_right = -50.2013
+offset_bottom = 352.423
+
+[node name="Button3" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -506.0
+offset_top = 55.9999
+offset_right = -408.0
+offset_bottom = 168.0
+
+[node name="Button11" type="Button" parent="Node2D/Button2/План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 296.0
+offset_top = 136.0
+offset_right = 387.0
+offset_bottom = 232.0
+script = ExtResource("16_e2874")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button11"]
+visible = false
+layout_mode = 0
+offset_left = -1250.0
+offset_top = -672.0
+offset_right = 663.0
+offset_bottom = 402.0
+stream = ExtResource("20_wvjk8")
+expand = true
+script = ExtResource("21_d5p14")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/Button2/План2/Button11/VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+volume_db = -80.0
+autoplay = true
+expand = true
+script = ExtResource("22_r83pn")
+
+[node name="Button123456" type="Button" parent="Node2D/Button2/План2/Button11/VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 405.022
+offset_top = 773.461
+offset_right = 747.022
+offset_bottom = 919.461
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 70
+text = "камеры"
+flat = true
+
+[node name="Button55555" type="Button" parent="Node2D/Button2/План2"]
+offset_left = -119.0
+offset_top = 1271.0
+offset_right = 2029.0
+offset_bottom = 1442.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 88
+flat = true
+clip_text = true
+
+[node name="9103" type="Button" parent="Node2D/Button2/План2"]
+offset_left = 2566.0
+offset_top = -148.0
+offset_right = 2702.0
+offset_bottom = -57.0
+flat = true
+
+[node name="dd3" type="Button" parent="Node2D"]
+offset_left = 5.0
+offset_top = 24.0
+offset_right = 453.0
+offset_bottom = 152.0
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 120
+text = "Пауза"
+flat = true
+clip_text = true
+
+[node name="Maxresdefault(2)" type="Sprite2D" parent="Node2D"]
+position = Vector2(566.996, 581.632)
+scale = Vector2(1.99531, 1.57398)
+texture = ExtResource("6_pdwvu")
+
+[node name="Button4" type="Button" parent="Node2D"]
+visible = false
+offset_left = -117.0
+offset_top = -61.0
+offset_right = 1996.0
+offset_bottom = 1156.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+toggle_mode = true
+button_pressed = true
+
+[node name="Label" type="Label" parent="Node2D/Button4"]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 86.0
+offset_right = 1566.0
+offset_bottom = 302.0
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 150
+text = "Пауза"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="Node2D/Button4"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 394.0
+offset_right = 1501.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 80
+text = "Продолжить игру!"
+flat = true
+
+[node name="Button5" type="Button" parent="Node2D/Button4"]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 530.0
+offset_right = 1500.0
+offset_bottom = 645.0
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 67
+text = "Выйти в главное меню"
+flat = true
+clip_text = true
+script = ExtResource("20_ottc4")
+
+[node name="Button6" type="Button" parent="Node2D/Button4"]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 677.0
+offset_right = 1511.0
+offset_bottom = 771.0
+theme_override_fonts/font = ExtResource("7_2d7pf")
+theme_override_font_sizes/font_size = 65
+text = "выйти на рабочий стол"
+flat = true
+clip_text = true
+expand_icon = true
+script = ExtResource("21_u2okl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("45_ngo1n")
+volume_db = -15.582
+autoplay = true
+script = ExtResource("46_is3jc")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Node2D/Button" to="Node2D/Button" method="_on_pressed"]
+[connection signal="pressed" from="Node2D/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/Buttonn1" to="Node2D/Button2/План2/Buttonn1" method="_on_Buttonn1_pressed"]
+[connection signal="finished" from="Node2D/Button2/План2/Buttonn1/VideoStreamPlayer" to="Node2D/Button2/План2/Buttonn1/VideoStreamPlayer" method="_on_finished"]
+[connection signal="finished" from="Node2D/Button2/План2/Buttonn1/VideoStreamPlayer/VideoStreamPlayer2" to="Node2D/Button2/План2/Buttonn1/VideoStreamPlayer/VideoStreamPlayer2" method="_on_finished"]
+[connection signal="pressed" from="Node2D/Button2/План2/Buttonn1/VideoStreamPlayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button5" to="Node2D/Button2/План2/Button5" method="_on_pressed"]
+[connection signal="finished" from="Node2D/Button2/План2/Button5/VideoStreamPlayer" to="Node2D/Button2/План2/Button5/VideoStreamPlayer" method="_on_finished"]
+[connection signal="finished" from="Node2D/Button2/План2/Button5/VideoStreamPlayer/VideoStreamPlayer" to="Node2D/Button2/План2/Button5/VideoStreamPlayer/VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button5/VideoStreamPlayer/Button12345" to="." method="_on_button_12345_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button6" to="Node2D/Button2/План2/Button6" method="_on_pressed"]
+[connection signal="finished" from="Node2D/Button2/План2/Button6/VideoStreamPlayer" to="Node2D/Button2/План2/Button6/VideoStreamPlayer" method="_on_finished"]
+[connection signal="finished" from="Node2D/Button2/План2/Button6/VideoStreamPlayer/VideoStreamPlayer" to="Node2D/Button2/План2/Button6/VideoStreamPlayer/VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button6/VideoStreamPlayer/Button11e1" to="." method="_on_button_11e_1_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button7" to="Node2D/Button2/План2/Button7" method="_on_pressed"]
+[connection signal="finished" from="Node2D/Button2/План2/Button7/VideoStreamPlayer" to="Node2D/Button2/План2/Button7/VideoStreamPlayer" method="_on_finished"]
+[connection signal="finished" from="Node2D/Button2/План2/Button7/VideoStreamPlayer/VideoStreamPlayer" to="Node2D/Button2/План2/Button7/VideoStreamPlayer/VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button7/VideoStreamPlayer/Button10e99" to="." method="_on_button_10e_99_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button8" to="Node2D/Button2/План2/Button8" method="_on_Button8_pressed"]
+[connection signal="finished" from="Node2D/Button2/План2/Button8/VideoStreamPlayer" to="Node2D/Button2/План2/Button8/VideoStreamPlayer" method="_on_finished"]
+[connection signal="finished" from="Node2D/Button2/План2/Button8/VideoStreamPlayer/VideoStreamPlayer" to="Node2D/Button2/План2/Button8/VideoStreamPlayer/VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button8/VideoStreamPlayer/Button01" to="." method="_on_button_01_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button9" to="Node2D/Button2/План2/Button9" method="_on_pressed"]
+[connection signal="finished" from="Node2D/Button2/План2/Button9/VideoStreamPlayer" to="Node2D/Button2/План2/Button9/VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button9/VideoStreamPlayer/Button124567809" to="." method="_on_button_124567809_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button11" to="Node2D/Button2/План2/Button11" method="_on_Button11_pressed"]
+[connection signal="finished" from="Node2D/Button2/План2/Button11/VideoStreamPlayer" to="Node2D/Button2/План2/Button11/VideoStreamPlayer" method="_on_finished"]
+[connection signal="finished" from="Node2D/Button2/План2/Button11/VideoStreamPlayer/VideoStreamPlayer" to="Node2D/Button2/План2/Button11/VideoStreamPlayer/VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button11/VideoStreamPlayer/Button123456" to="." method="_on_button_123456_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/Button55555" to="." method="_on_button_55555_pressed"]
+[connection signal="pressed" from="Node2D/Button2/План2/9103" to="." method="_on__pressed"]
+[connection signal="pressed" from="Node2D/dd3" to="." method="_on_dd_3_pressed"]
+[connection signal="pressed" from="Node2D/Button4/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Node2D/Button4/Button5" to="Node2D/Button4/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Node2D/Button4/Button6" to="Node2D/Button4/Button6" method="_on_pressed"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="AudioStreamPlayer2D" method="_on_finished"]

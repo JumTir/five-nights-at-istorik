@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ns7311ik7xmi"]
+
+[ext_resource type="PackedScene" uid="uid://cv0gkni472853" path="res://Epic Jarv-Hillar (1).glb" id="1_qfajf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iv734"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_j1ocf"]
+material = SubResource("StandardMaterial3D_iv734")
+
+[node name="Epic Jarv-Hillar (1)" instance=ExtResource("1_qfajf")]
+
+[node name="Mesh_Mesh_head_geo001_lambert2SG001" parent="Node2" index="0"]
+transform = Transform3D(0.677822, -0.0196836, 4.83279e-18, 0.0336609, 0.396364, 1.19941e-19, -7.47421e-18, 1.08447e-19, 0.438816, 104.958, -37.4253, -0.0876112)
+
+[node name="Camera3D" type="Camera3D" parent="." index="1"]
+transform = Transform3D(-0.0761599, -0.062821, -0.995115, -0.00844516, 0.998018, -0.0623579, 0.99706, 0.00365473, -0.0765395, 74.1234, 0.889189, 40.8231)
+fov = 123.515
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(94.9974, 0, 0, 0, 3.08328, 0, 0, 0, 46.1998, 52.0221, 0, 45.0526)
+mesh = SubResource("PlaneMesh_j1ocf")

@@ -1,0 +1,116 @@
+[gd_scene load_steps=11 format=3 uid="uid://cdv2hsscdvfhs"]
+
+[ext_resource type="Texture2D" uid="uid://dmk7pbf8c75xq" path="res://план2.png" id="1"]
+[ext_resource type="Script" path="res://камеры.gd" id="1_nxs1l"]
+[ext_resource type="Script" path="res://Buttonn1.gd" id="2"]
+[ext_resource type="Script" path="res://Button8.gd" id="3"]
+[ext_resource type="Script" path="res://Button5.gd" id="3_nk32r"]
+[ext_resource type="Script" path="res://Button3.gd" id="4"]
+[ext_resource type="Script" path="res://Button67.gd" id="4_thnnu"]
+[ext_resource type="Script" path="res://проходкамера.gd" id="5_a8vtt"]
+[ext_resource type="Script" path="res://Button9.gd" id="5_old5v"]
+[ext_resource type="Script" path="res://99.gd" id="10_jvpvf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_nxs1l")
+
+[node name="План2" type="Sprite2D" parent="."]
+position = Vector2(961, 503.5)
+scale = Vector2(1.00417, 0.937963)
+texture = ExtResource("1")
+
+[node name="Buttonn1" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -199.974
+offset_top = 70.2066
+offset_right = -101.974
+offset_bottom = 184.207
+script = ExtResource("2")
+
+[node name="Button5" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -181.285
+offset_top = -411.397
+offset_right = -83.2849
+offset_bottom = -297.397
+script = ExtResource("3_nk32r")
+
+[node name="Button6" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 494.0
+offset_top = -520.0
+offset_right = 592.0
+offset_bottom = -418.0
+script = ExtResource("4_thnnu")
+
+[node name="Button7" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 536.0
+offset_top = -128.0
+offset_right = 634.0
+offset_bottom = -40.0
+script = ExtResource("5_a8vtt")
+
+[node name="Button8" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 734.0
+offset_top = -75.0
+offset_right = 814.0
+offset_bottom = 13.0
+script = ExtResource("3")
+
+[node name="Button9" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 596.184
+offset_top = 333.973
+offset_right = 676.184
+offset_bottom = 421.973
+script = ExtResource("5_old5v")
+
+[node name="Button10" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -130.201
+offset_top = 264.423
+offset_right = -50.2013
+offset_bottom = 352.423
+
+[node name="Button3" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -506.0
+offset_top = 56.0
+offset_right = -408.0
+offset_bottom = 168.0
+
+[node name="Button11" type="Button" parent="План2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 295.912
+offset_top = 135.82
+offset_right = 393.912
+offset_bottom = 247.82
+script = ExtResource("4")
+
+[node name="Button55555" type="Button" parent="."]
+offset_left = 41.0
+offset_top = 690.0
+offset_right = 457.0
+offset_bottom = 835.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "НАЗАД"
+flat = true
+clip_text = true
+script = ExtResource("10_jvpvf")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="pressed" from="План2/Buttonn1" to="План2/Buttonn1" method="_on_Buttonn1_pressed"]
+[connection signal="pressed" from="План2/Button5" to="План2/Button5" method="_on_pressed"]
+[connection signal="pressed" from="План2/Button6" to="План2/Button6" method="_on_pressed"]
+[connection signal="pressed" from="План2/Button7" to="План2/Button7" method="_on_pressed"]
+[connection signal="pressed" from="План2/Button8" to="План2/Button8" method="_on_Button8_pressed"]
+[connection signal="pressed" from="План2/Button9" to="План2/Button9" method="_on_pressed"]
+[connection signal="pressed" from="План2/Button11" to="План2/Button11" method="_on_Button11_pressed"]
+[connection signal="pressed" from="Button55555" to="Button55555" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

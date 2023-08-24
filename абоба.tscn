@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh4kgmmxtidme"]
+
+[ext_resource type="VideoStream" path="res://обнова-5-ночей-с-историком-альфа-0_2.ogv" id="1_t46dt"]
+[ext_resource type="Script" path="res://fj.gd" id="2_3vx5s"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -969.0
+offset_top = -540.0
+offset_right = 972.0
+offset_bottom = 566.0
+stream = ExtResource("1_t46dt")
+autoplay = true
+expand = true
+script = ExtResource("2_3vx5s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

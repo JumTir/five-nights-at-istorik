@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd2wfhvc0yhhd"]
+
+[ext_resource type="Script" path="res://коридор2.gd" id="1_i2rmr"]
+[ext_resource type="Texture2D" uid="uid://dvj6kq7t4x662" path="res://коридор2.jpg" id="2_px3cs"]
+[ext_resource type="Script" path="res://зз.gd" id="3_pl57t"]
+[ext_resource type="Texture2D" uid="uid://twh1htw7x4yq" path="res://историк.png" id="4_3cura"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_i2rmr")
+
+[node name="Коридор2" type="Sprite2D" parent="."]
+position = Vector2(964, 502.5)
+scale = Vector2(0.998959, 0.928703)
+texture = ExtResource("2_px3cs")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 319.0
+offset_bottom = 126.0
+script = ExtResource("3_pl57t")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_right = 317.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 100
+text = "назад"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="Историк" type="Sprite2D" parent="."]
+position = Vector2(895, 595)
+scale = Vector2(0.927041, 0.845)
+texture = ExtResource("4_3cura")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

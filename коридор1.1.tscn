@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://iw1u3ikd0scf"]
+
+[ext_resource type="Script" path="res://коридор1.gd" id="1_wkmyh"]
+[ext_resource type="Texture2D" uid="uid://265u7vrfh7cu" path="res://1.jpg" id="2_jvffn"]
+[ext_resource type="Script" path="res://Button56.gd" id="3_p8xcm"]
+[ext_resource type="Texture2D" uid="uid://twh1htw7x4yq" path="res://историк.png" id="4_7nidv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wkmyh")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(964.999, 512.001)
+scale = Vector2(1.50625, 1.40833)
+texture = ExtResource("2_jvffn")
+
+[node name="Button56" type="Button" parent="1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -560.0
+offset_top = -335.0
+offset_right = -345.0
+offset_bottom = -251.0
+action_mode = 0
+script = ExtResource("3_p8xcm")
+
+[node name="Label" type="Label" parent="1/Button56"]
+layout_mode = 0
+offset_right = 137.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "НАЗАД"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Историк" type="Sprite2D" parent="."]
+position = Vector2(820.25, 552.5)
+scale = Vector2(0.92838, 0.915)
+texture = ExtResource("4_7nidv")
+
+[connection signal="pressed" from="1/Button56" to="1/Button56" method="_on_Button56_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

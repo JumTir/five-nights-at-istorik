@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfrrov2qndtuw"]
+
+[ext_resource type="Script" path="res://проход.gd" id="1_78wia"]
+[ext_resource type="Texture2D" uid="uid://dghoa5qw8b6gs" path="res://ии.png" id="1_hjt4j"]
+[ext_resource type="Script" path="res://uu.gd" id="2_vtoun"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_78wia")
+
+[node name="Ии" type="Sprite2D" parent="."]
+position = Vector2(963, 599)
+texture = ExtResource("1_hjt4j")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 741.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 150
+text = "ВЫХОД"
+flat = true
+script = ExtResource("2_vtoun")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

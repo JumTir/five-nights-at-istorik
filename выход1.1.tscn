@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6gq3oboqvws"]
+
+[ext_resource type="Texture2D" uid="uid://bdie5dv6ol338" path="res://выход1.png" id="1_hxyxo"]
+[ext_resource type="Script" path="res://выход1.1.gd" id="1_xcjia"]
+[ext_resource type="FontFile" uid="uid://dl5xohxgote2n" path="res://ofont.ru_Another_Danger.ttf" id="2_06xgq"]
+[ext_resource type="Script" path="res://Button00.gd" id="3_urcxh"]
+[ext_resource type="Texture2D" uid="uid://twh1htw7x4yq" path="res://историк.png" id="5_31cve"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_xcjia")
+
+[node name="Выход1" type="Sprite2D" parent="."]
+position = Vector2(1027, 597.5)
+scale = Vector2(1.70167, 1.32556)
+texture = ExtResource("1_hxyxo")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 11.0
+offset_top = 17.0
+offset_right = 521.0
+offset_bottom = 249.0
+theme_override_fonts/font = ExtResource("2_06xgq")
+theme_override_font_sizes/font_size = 130
+text = "Назад"
+flat = true
+script = ExtResource("3_urcxh")
+
+[node name="Историк" type="Sprite2D" parent="."]
+position = Vector2(1367, 667)
+texture = ExtResource("5_31cve")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

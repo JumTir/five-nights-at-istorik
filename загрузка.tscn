@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://c45j08qdm78l6"]
+
+[ext_resource type="Texture2D" uid="uid://caa05venrarmm" path="res://аааааааа.png" id="1_1asoe"]
+[ext_resource type="Script" path="res://Button333.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cvcgl6s5wes2t" path="res://аа.png" id="2_e1anb"]
+[ext_resource type="FontFile" uid="uid://ll6th7st2qj4" path="res://EBENYA.ttf" id="3_xj85k"]
+[ext_resource type="Texture2D" uid="uid://twh1htw7x4yq" path="res://историк.png" id="5_71v76"]
+[ext_resource type="AudioStream" uid="uid://2yks6l36cyaq" path="res://8307-obemnyi-stuk-v-dver.mp3" id="6_7yg7t"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Аааааааа" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1007.5, 562)
+scale = Vector2(1.56797, 1.55556)
+texture = ExtResource("1_1asoe")
+
+[node name="Аа" type="Sprite2D" parent="."]
+position = Vector2(962, 549)
+texture = ExtResource("2_e1anb")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1341.0
+offset_top = 143.0
+offset_right = 1814.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0.568627, 0.686275, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.478431, 1)
+theme_override_fonts/font = ExtResource("3_xj85k")
+theme_override_font_sizes/font_size = 60
+text = "Продолжить"
+flat = true
+clip_text = true
+expand_icon = true
+script = ExtResource("2")
+
+[node name="Историк" type="Sprite2D" parent="."]
+position = Vector2(908, 596.5)
+scale = Vector2(1.32262, 1.133)
+texture = ExtResource("5_71v76")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_7yg7t")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

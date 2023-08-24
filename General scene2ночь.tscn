@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3 uid="uid://clf67uf3kiato"]
+
+[ext_resource type="Texture2D" uid="uid://h4gprohkl1gm" path="res://кортина.jpg" id="1_kimwy"]
+[ext_resource type="VideoStream" path="res://кортина_2.ogv" id="2_eweyy"]
+[ext_resource type="Script" path="res://VideoStreamPlayerпп.gd" id="3_ymcfg"]
+[ext_resource type="Texture2D" uid="uid://dgf2hjxc2h8s1" path="res://ogurchick.png" id="4_h6awx"]
+[ext_resource type="AudioStream" uid="uid://b8dd0fsr3t2a5" path="res://музыка топ.mp3" id="5_0lm63"]
+[ext_resource type="VideoStream" path="res://видео для игры.ogv" id="6_3a08y"]
+[ext_resource type="VideoStream" path="res://что-то.ogv" id="7_q3y4e"]
+[ext_resource type="Script" path="res://VideoStreamPlayer3.gd" id="8_jmu1v"]
+[ext_resource type="FontFile" uid="uid://dl5xohxgote2n" path="res://ofont.ru_Another_Danger.ttf" id="9_dijk6"]
+[ext_resource type="Texture2D" uid="uid://01jgw522xt5d" path="res://bruh3.png" id="10_mwn6r"]
+[ext_resource type="Script" path="res://Button.gd" id="11_edapm"]
+
+[sub_resource type="QuadMesh" id="1"]
+
+[sub_resource type="QuadMesh" id="4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
+mesh = SubResource("1")
+
+[node name="Кортина" type="Sprite2D" parent="MeshInstance2D"]
+visible = false
+position = Vector2(922.25, 502.25)
+scale = Vector2(1.84798, 1.50455)
+texture = ExtResource("1_kimwy")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visible = false
+offset_left = -188.0
+offset_right = 2345.0
+offset_bottom = 1019.0
+stream = ExtResource("2_eweyy")
+autoplay = true
+expand = true
+script = ExtResource("3_ymcfg")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(836, 408)
+scale = Vector2(1.68182, 1.23065)
+mesh = SubResource("4")
+
+[node name="Sprite2D" type="Sprite2D" parent="MeshInstance2D2"]
+visible = false
+position = Vector2(283.621, 204.77)
+scale = Vector2(0.388315, 0.445989)
+texture = ExtResource("4_h6awx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_0lm63")
+autoplay = true
+
+[node name="VideoStreamPlayer2" type="VideoStreamPlayer" parent="."]
+offset_right = 1840.0
+offset_bottom = 997.0
+stream = ExtResource("6_3a08y")
+autoplay = true
+
+[node name="VideoStreamPlayer3" type="VideoStreamPlayer" parent="."]
+offset_right = 1841.0
+offset_bottom = 1002.0
+stream = ExtResource("7_q3y4e")
+script = ExtResource("8_jmu1v")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 144.0
+offset_top = 467.0
+offset_right = 1776.0
+offset_bottom = 1555.0
+scale = Vector2(0.378875, 0.398165)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("9_dijk6")
+theme_override_font_sizes/font_size = 600
+action_mode = 0
+text = "Играть"
+icon = ExtResource("10_mwn6r")
+clip_text = true
+icon_alignment = 1
+script = ExtResource("11_edapm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 279.0
+offset_top = 116.0
+offset_right = 1597.0
+offset_bottom = 386.0
+theme_override_colors/font_color = Color(0.87451, 0, 0.113725, 1)
+theme_override_fonts/font = ExtResource("9_dijk6")
+theme_override_font_sizes/font_size = 150
+text = "5 ночей с историком"
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
+[connection signal="finished" from="VideoStreamPlayer2" to="VideoStreamPlayer3" method="_on_video_stream_player_2_finished"]
+[connection signal="finished" from="VideoStreamPlayer3" to="VideoStreamPlayer3" method="_on_finished"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

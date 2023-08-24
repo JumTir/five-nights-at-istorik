@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://clnglw8ae6tw7"]
+
+[ext_resource type="Script" path="res://скример историка.gd" id="1_qijmm"]
+[ext_resource type="VideoStream" path="res://скример.ogv" id="1_sl2tk"]
+[ext_resource type="Texture2D" uid="uid://b0twpefrw6utn" path="res://Нужно.png" id="3_xijfh"]
+[ext_resource type="FontFile" uid="uid://dl5xohxgote2n" path="res://ofont.ru_Another_Danger.ttf" id="4_ab6fq"]
+[ext_resource type="Script" path="res://[poij.gd" id="5_yt8ik"]
+[ext_resource type="AudioStream" uid="uid://dep18rcs1qif5" path="res://aughhhh-bass-boosted.mp3" id="6_lt308"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qijmm")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1410.0
+offset_bottom = 796.0
+stream = ExtResource("1_sl2tk")
+volume_db = -2.21
+autoplay = true
+
+[node name="Нужно" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(956, 539)
+scale = Vector2(1.00729, 1)
+texture = ExtResource("3_xijfh")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 1274.0
+offset_top = 784.0
+offset_right = 1787.0
+offset_bottom = 935.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ab6fq")
+theme_override_font_sizes/font_size = 60
+text = "выйти в главное меню"
+script = ExtResource("5_yt8ik")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_lt308")
+volume_db = 9.585
+autoplay = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

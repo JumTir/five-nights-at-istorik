@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnb8goilv4vam"]
+
+[ext_resource type="Script" path="res://o.gd" id="1_70ia8"]
+[ext_resource type="Script" path="res://выход1.gd" id="1_fj7kg"]
+[ext_resource type="Texture2D" uid="uid://bdie5dv6ol338" path="res://выход1.png" id="1_swemj"]
+[ext_resource type="FontFile" uid="uid://dl5xohxgote2n" path="res://ofont.ru_Another_Danger.ttf" id="2_wa5q0"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fj7kg")
+
+[node name="Выход1" type="Sprite2D" parent="."]
+position = Vector2(945.5, 544)
+scale = Vector2(1.57083, 1.21111)
+texture = ExtResource("1_swemj")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 367.0
+offset_bottom = 181.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_wa5q0")
+theme_override_font_sizes/font_size = 100
+text = "ВЫХОД"
+flat = true
+icon_alignment = 1
+script = ExtResource("1_70ia8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

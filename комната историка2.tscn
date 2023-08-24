@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bynxgxx0x1owx"]
+
+[ext_resource type="Script" path="res://комната историка.gd" id="1_2xdd7"]
+[ext_resource type="Texture2D" uid="uid://r11u23hjslvx" path="res://комната историка.png" id="2_66n68"]
+[ext_resource type="Script" path="res://ButtonBB.gd" id="3_1hj4b"]
+[ext_resource type="Texture2D" uid="uid://twh1htw7x4yq" path="res://историк.png" id="4_wuqf8"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2xdd7")
+
+[node name="КомнатаИсторика" type="Sprite2D" parent="."]
+position = Vector2(979.875, 540.563)
+scale = Vector2(1.63521, 1.34691)
+texture = ExtResource("2_66n68")
+
+[node name="Button" type="Button" parent="КомнатаИсторика"]
+offset_left = -565.0
+offset_top = -367.0
+offset_right = -220.0
+offset_bottom = -235.0
+flat = true
+script = ExtResource("3_1hj4b")
+
+[node name="Label" type="Label" parent="КомнатаИсторика/Button"]
+layout_mode = 0
+offset_right = 375.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 100
+text = "НАЗАД"
+
+[node name="Istorik" type="Sprite2D" parent="."]
+position = Vector2(1489, 538)
+texture = ExtResource("4_wuqf8")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="КомнатаИсторика/Button" to="КомнатаИсторика/Button" method="_on_Button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
